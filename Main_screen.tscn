@@ -1,36 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvfd1g8bt0yov"]
+[gd_scene load_steps=4 format=3 uid="uid://bvfd1g8bt0yov"]
 
+[ext_resource type="Script" path="res://input_line.gd" id="1_40cvg"]
 [ext_resource type="Texture2D" uid="uid://ku7nx5xm6lr0" path="res://adil-yousifi-wizard.jpg" id="1_xr5xv"]
 [ext_resource type="Script" path="res://display_word.gd" id="2_a5peu"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(554, 178)
 
-[node name="Player 1" type="Node2D" parent="."]
-position = Vector2(-441, 31)
+[node name="Player1" type="Node2D" parent="."]
+position = Vector2(-199, -11)
 
-[node name="LineEdit" type="LineEdit" parent="Player 1"]
-offset_left = -70.0
-offset_top = 35.0
-offset_right = 52.0
-offset_bottom = 70.0
+[node name="input_line" type="LineEdit" parent="Player1"]
+offset_left = 136.0
+offset_top = 357.0
+offset_right = 258.0
+offset_bottom = 392.0
+script = ExtResource("1_40cvg")
+metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Player 1"]
+[node name="Sprite2D" type="Sprite2D" parent="Player1"]
 position = Vector2(-0.999994, 247)
 scale = Vector2(0.198746, 0.256453)
 texture = ExtResource("1_xr5xv")
 
-[node name="word_display" type="Label" parent="Player 1"]
-offset_left = -53.0
-offset_top = -48.0
-offset_right = 71.0
-offset_bottom = -19.0
+[node name="word_display" type="Label" parent="Player1"]
+offset_left = -83.0
+offset_top = 41.0
+offset_right = 41.0
+offset_bottom = 70.0
 text = "Testing"
 script = ExtResource("2_a5peu")
+metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="Player 1/word_display"]
-layout_mode = 0
-offset_left = 81.0
-offset_top = 11.0
-offset_right = 89.0
-offset_bottom = 19.0
+[node name="hit_marker" type="Line2D" parent="Player1"]
+visible = false
+points = PackedVector2Array(190, 123, 518, 123)
+default_color = Color(1, 0, 0, 1)
+
+[node name="flash_timer" type="Timer" parent="Player1/hit_marker"]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Player1/hit_marker/flash_timer" to="Player1/input_line" method="_on_timer_timeout"]
