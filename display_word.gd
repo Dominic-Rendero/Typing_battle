@@ -1,20 +1,24 @@
-extends Node2D
+extends Label
 
 var csv_file_path = "res://random_words_test.csv"
 var words = []
 
+@onready var word_display =  self
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
 	words = read_csv_into_list(csv_file_path)
 	display_word()
-
-
+	
 func display_word():
 	var random_index = randi() % words.size()
 	var random_word = words[random_index]
-	Label.text = random_word
-
+	word_display.text = random_word
+	
+func _input(_event):
+	if Input.is_action_pressed("ui_accept"):
+		display_word()
+		
 func read_csv_into_list(path):
 	var file = FileAccess.open(path, FileAccess.READ)
 	var word_list = []
