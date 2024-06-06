@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvfd1g8bt0yov"]
+[gd_scene load_steps=3 format=3 uid="uid://bc1ha0bqdjxy2"]
 
-[ext_resource type="Script" path="res://input_line.gd" id="1_40cvg"]
 [ext_resource type="Texture2D" uid="uid://ku7nx5xm6lr0" path="res://adil-yousifi-wizard.jpg" id="1_xr5xv"]
 [ext_resource type="Script" path="res://display_word.gd" id="2_a5peu"]
 
@@ -15,7 +14,6 @@ offset_left = 136.0
 offset_top = 357.0
 offset_right = 258.0
 offset_bottom = 392.0
-script = ExtResource("1_40cvg")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player1"]
@@ -39,6 +37,5 @@ default_color = Color(1, 0, 0, 1)
 
 [node name="flash_timer" type="Timer" parent="Player1/hit_marker"]
 wait_time = 0.1
-one_shot = true
 
-[connection signal="timeout" from="Player1/hit_marker/flash_timer" to="Player1/input_line" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player1/hit_marker/flash_timer" to="Player1/word_display" method="_on_flash_timer_timeout"]
