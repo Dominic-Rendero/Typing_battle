@@ -17,7 +17,7 @@ offset_bottom = 392.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player1"]
-position = Vector2(-0.999994, 247)
+position = Vector2(-244, 264)
 scale = Vector2(0.198746, 0.256453)
 texture = ExtResource("1_xr5xv")
 
@@ -31,8 +31,7 @@ script = ExtResource("2_a5peu")
 metadata/_edit_use_anchors_ = true
 
 [node name="hit_marker" type="Line2D" parent="Player1"]
-visible = false
-points = PackedVector2Array(190, 123, 518, 123)
+points = PackedVector2Array(-178, 144, 322.563, 123, 788, 107)
 default_color = Color(1, 0, 0, 1)
 
 [node name="flash_timer" type="Timer" parent="Player1/hit_marker"]
