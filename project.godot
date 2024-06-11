@@ -10,10 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Typing Battle"
-run/main_scene="res://Main_screen.tscn"
+config/name="Typing_Battles"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="Typing_Battles"
 
 [rendering]
 

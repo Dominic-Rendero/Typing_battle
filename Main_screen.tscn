@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc1ha0bqdjxy2"]
+[gd_scene load_steps=3 format=3 uid="uid://1gyygl8r6l0j"]
 
-[ext_resource type="Texture2D" uid="uid://ku7nx5xm6lr0" path="res://adil-yousifi-wizard.jpg" id="1_xr5xv"]
-[ext_resource type="Script" path="res://display_word.gd" id="2_a5peu"]
+[ext_resource type="Texture2D" uid="uid://bnntt27lpxnnh" path="res://adil-yousifi-wizard.jpg" id="1_xr5xv"]
+[ext_resource type="Script" path="res://display_word.cs" id="2_pbj0y"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(554, 178)
@@ -27,7 +27,7 @@ offset_top = 41.0
 offset_right = 41.0
 offset_bottom = 70.0
 text = "Testing"
-script = ExtResource("2_a5peu")
+script = ExtResource("2_pbj0y")
 metadata/_edit_use_anchors_ = true
 
 [node name="hit_marker" type="Line2D" parent="Player1"]
