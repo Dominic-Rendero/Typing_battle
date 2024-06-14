@@ -15,7 +15,7 @@ public partial class display_word : Label{
         wordlabel = GetNode<Label>("/root/Node2D/char1/display_word");
         input = GetNode<LineEdit>("/root/Node2D/char1/input");
         hitmarker = GetNode<Line2D>("/root/Node2D/char1/hitmarker");
-        hittimer = GetNode<Timer>("/root/Node2D/char1/hitmarker/Timer");
+        hittimer = GetNode<Timer>("/root/Node2D/char1/hitmarker/timer");
         
         words = csv_to_list("res://rand_words.csv");
         GetRandomWord();
@@ -35,22 +35,19 @@ public partial class display_word : Label{
         }
         return wordlist;
     }
-
-    
-    
     private void GetRandomWord(){
         GD.Randomize();
         Random rand = new Random();
         int i = rand.Next(words.Count);
         var randword = words[i];
         wordlabel.Text = randword;
-    }
-    
+    } 
     public override void _Input(InputEvent @event){
         if (@event.IsActionPressed("ui_accept")){
             if(wordlabel.Text == input.Text){
                 GetRandomWord();
                 hitmarker.Visible = true;
+                hittimer.Start();
             }
             input.Text = "";
         }

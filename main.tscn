@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://df1bssrcteh62"]
+[gd_scene load_steps=5 format=3 uid="uid://df1bssrcteh62"]
 
 [ext_resource type="Texture2D" uid="uid://dayddbgy1sgk1" path="res://adil-yousifi-wizard.jpg" id="1_ula2p"]
 [ext_resource type="Script" path="res://Scripts/main.cs" id="1_ws5pj"]
 [ext_resource type="Script" path="res://Scripts/display_word.cs" id="2_ycc02"]
+[ext_resource type="Script" path="res://Scripts/timer.cs" id="4_cdy7j"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(617, 70)
@@ -39,3 +40,6 @@ default_color = Color(1, 0, 0, 1)
 [node name="timer" type="Timer" parent="char1/hitmarker"]
 wait_time = 0.095
 one_shot = true
+script = ExtResource("4_cdy7j")
+
+[connection signal="timeout" from="char1/hitmarker/timer" to="char1/hitmarker/timer" method="_on_timeout"]
