@@ -17,23 +17,8 @@ public partial class display_word : Label{
         hitmarker = GetNode<Line2D>("/root/Node2D/char1/hitmarker");
         hittimer = GetNode<Timer>("/root/Node2D/char1/hitmarker/timer");
         
-        words = csv_to_list("res://rand_words.csv");
+        words = utils.csv_to_list("res://rand_words.csv");
         GetRandomWord();
-    }
-    public List<string> csv_to_list(string path){
-        List<string> wordlist = new List<string>();
-        using var file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Read);
-        
-        if (file != null){
-            while(!file.EofReached()){
-                string word = file.GetLine();
-                wordlist.Add(word);
-            }
-        }           
-        else{
-            GD.Print("File not found: " + path);
-        }
-        return wordlist;
     }
     private void GetRandomWord(){
         GD.Randomize();

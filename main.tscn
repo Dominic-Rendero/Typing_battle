@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://df1bssrcteh62"]
 
 [ext_resource type="Texture2D" uid="uid://dayddbgy1sgk1" path="res://adil-yousifi-wizard.jpg" id="1_ula2p"]
-[ext_resource type="Script" path="res://Scripts/main.cs" id="1_ws5pj"]
+[ext_resource type="Script" path="res://Scripts/utils.cs" id="1_ws5pj"]
 [ext_resource type="Script" path="res://Scripts/display_word.cs" id="2_ycc02"]
 [ext_resource type="Script" path="res://Scripts/timer.cs" id="4_cdy7j"]
 
@@ -32,9 +32,8 @@ offset_right = 143.0
 offset_bottom = 238.0
 
 [node name="hitmarker" type="Line2D" parent="char1"]
-visible = false
 position = Vector2(390, -85)
-points = PackedVector2Array(-304, 427, 78, 334, 319, 402)
+points = PackedVector2Array(-304, 427, -24, 364, 314, 295)
 default_color = Color(1, 0, 0, 1)
 
 [node name="timer" type="Timer" parent="char1/hitmarker"]
