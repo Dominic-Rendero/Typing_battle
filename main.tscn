@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://df1bssrcteh62"]
+
+[ext_resource type="Texture2D" uid="uid://dayddbgy1sgk1" path="res://adil-yousifi-wizard.jpg" id="1_ula2p"]
+[ext_resource type="Script" path="res://Scripts/utils.cs" id="1_ws5pj"]
+[ext_resource type="Script" path="res://Scripts/display_word.cs" id="2_ycc02"]
+[ext_resource type="Script" path="res://Scripts/timer.cs" id="4_cdy7j"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(617, 70)
+script = ExtResource("1_ws5pj")
+
+[node name="char1" type="Node2D" parent="."]
+position = Vector2(-390, 85)
+
+[node name="visual" type="Sprite2D" parent="char1"]
+position = Vector2(-100, 304)
+scale = Vector2(0.204892, 0.243547)
+texture = ExtResource("1_ula2p")
+
+[node name="display_word" type="Label" parent="char1"]
+offset_left = 17.0
+offset_top = 63.0
+offset_right = 117.0
+offset_bottom = 104.0
+text = "testing"
+script = ExtResource("2_ycc02")
+
+[node name="input" type="LineEdit" parent="char1"]
+offset_left = 41.0
+offset_top = 207.0
+offset_right = 143.0
+offset_bottom = 238.0
+
+[node name="hitmarker" type="Line2D" parent="char1"]
+position = Vector2(390, -85)
+points = PackedVector2Array(-304, 427, -24, 364, 314, 295)
+default_color = Color(1, 0, 0, 1)
+
+[node name="timer" type="Timer" parent="char1/hitmarker"]
+wait_time = 0.095
+one_shot = true
+script = ExtResource("4_cdy7j")
+
+[connection signal="timeout" from="char1/hitmarker/timer" to="char1/hitmarker/timer" method="_on_timeout"]
