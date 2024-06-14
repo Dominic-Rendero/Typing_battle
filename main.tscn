@@ -11,7 +11,7 @@ script = ExtResource("1_ws5pj")
 [node name="char1" type="Node2D" parent="."]
 position = Vector2(-390, 85)
 
-[node name="icon1" type="Sprite2D" parent="char1"]
+[node name="visual" type="Sprite2D" parent="char1"]
 position = Vector2(-100, 304)
 scale = Vector2(0.204892, 0.243547)
 texture = ExtResource("1_ula2p")
@@ -29,3 +29,13 @@ offset_left = 41.0
 offset_top = 207.0
 offset_right = 143.0
 offset_bottom = 238.0
+
+[node name="hitmarker" type="Line2D" parent="char1"]
+visible = false
+position = Vector2(390, -85)
+points = PackedVector2Array(-304, 427, 78, 334, 319, 402)
+default_color = Color(1, 0, 0, 1)
+
+[node name="timer" type="Timer" parent="char1/hitmarker"]
+wait_time = 0.095
+one_shot = true

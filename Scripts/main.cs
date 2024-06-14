@@ -16,12 +16,9 @@ public partial class main : Node2D
                 wordlist.Add(word);
             }
         }           
-        else
-        {
-
+        else{
             GD.Print("File not found: " + path);
         }
-
         return wordlist;
     }
 }
