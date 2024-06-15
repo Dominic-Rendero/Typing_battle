@@ -1,8 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 public partial class utils : Node2D
 {
     public static List<string> csv_to_list(string path){

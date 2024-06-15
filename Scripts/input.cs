@@ -1,8 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 public partial class input : LineEdit{
     private List<string> words = new List<string>();
     private List<string> sentences = new List<string>();
