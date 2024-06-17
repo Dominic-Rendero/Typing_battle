@@ -21,8 +21,8 @@ public partial class input : LineEdit{
         
         bighit = GetNode<Sprite2D>("/root/Node2D/char1/fireball");
         
-        words = utils.csv_to_list("res://rand_words.csv");
-        sentences = utils.csv_to_list("res://rand_sentences.csv");
+        words = utils.txt_to_list("res://rand_words.txt");
+        sentences = utils.txt_to_list("res://rand_sentences.txt");
         GetRandomWord();
         GetRandomSentence();
     }
