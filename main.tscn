@@ -20,24 +20,24 @@ scale = Vector2(0.204892, 0.243547)
 texture = ExtResource("1_ula2p")
 
 [node name="display_word" type="Label" parent="char1"]
-offset_left = 17.0
-offset_top = 63.0
-offset_right = 117.0
-offset_bottom = 104.0
+offset_left = -151.0
+offset_top = 51.0
+offset_right = -51.0
+offset_bottom = 92.0
 text = "Words"
 
 [node name="input" type="LineEdit" parent="char1"]
-offset_left = 23.0
-offset_top = 419.0
-offset_right = 663.0
-offset_bottom = 459.0
+offset_left = 7.0
+offset_top = 361.0
+offset_right = 205.0
+offset_bottom = 401.0
 script = ExtResource("4_e8xwg")
 
 [node name="display_sentence" type="Label" parent="char1"]
-offset_left = 175.0
-offset_top = 1.0
-offset_right = 514.0
-offset_bottom = 24.0
+offset_left = -146.0
+offset_top = -12.0
+offset_right = 193.0
+offset_bottom = 11.0
 text = "Sentences"
 
 [node name="fireball" type="Sprite2D" parent="char1"]
@@ -63,31 +63,31 @@ one_shot = true
 script = ExtResource("4_cdy7j")
 
 [node name="char2" type="Node2D" parent="."]
-position = Vector2(-390, 85)
+position = Vector2(494, 72)
 
 [node name="visual" type="Sprite2D" parent="char2"]
-position = Vector2(-100, 304)
-scale = Vector2(0.204892, 0.243547)
+position = Vector2(-99, 322)
+scale = Vector2(0.195274, 0.229443)
 texture = ExtResource("1_ula2p")
 
 [node name="display_word" type="Label" parent="char2"]
-offset_left = 17.0
-offset_top = 63.0
-offset_right = 117.0
-offset_bottom = 104.0
+offset_left = -163.0
+offset_top = 91.0
+offset_right = -63.0
+offset_bottom = 132.0
 text = "Words"
 
 [node name="input" type="LineEdit" parent="char2"]
-offset_left = 23.0
-offset_top = 419.0
-offset_right = 663.0
-offset_bottom = 459.0
+offset_left = -454.0
+offset_top = 377.0
+offset_right = -253.0
+offset_bottom = 408.0
 script = ExtResource("4_e8xwg")
 
 [node name="display_sentence" type="Label" parent="char2"]
-offset_left = 175.0
+offset_left = -186.0
 offset_top = 1.0
-offset_right = 514.0
+offset_right = 153.0
 offset_bottom = 24.0
 text = "Sentences"
 
