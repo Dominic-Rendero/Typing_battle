@@ -10,6 +10,7 @@ public partial class input : LineEdit{
     private Timer hittimer;
     private Label sentencelabel;
     private Sprite2D bighit;
+    private Timer bigtimer;
     
     public override void _Ready(){
         GD.Print("start ready");
@@ -20,6 +21,7 @@ public partial class input : LineEdit{
         hittimer = GetNode<Timer>("/root/Node2D/char1/hitmarker/timer");
         
         bighit = GetNode<Sprite2D>("/root/Node2D/char1/fireball");
+        bigtimer = GetNode<Timer>("/root/Node2D/char1/fireball/BigTimer");
         
         words = utils.txt_to_list("res://rand_words.txt");
         sentences = utils.txt_to_list("res://rand_sentences.txt");
@@ -48,10 +50,16 @@ public partial class input : LineEdit{
                 hitmarker.Visible = true;
                 hittimer.Start();
             }
-            if(sentencelabel.Text == inputbox.Text){
+            else if((sentencelabel.Text == inputbox.Text) && (bighit.Visible == true)){
+                GetRandomSentence();
+                bighit.Visible = false;
+            }
+            else if(sentencelabel.Text == inputbox.Text){
                 GetRandomSentence();
                 bighit.Visible = true;
+                bigtimer.Start();
             }
+
             inputbox.Text = "";
         }
     }

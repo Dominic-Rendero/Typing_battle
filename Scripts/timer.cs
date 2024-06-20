@@ -7,7 +7,6 @@ public partial class timer : Timer{
         hitmarker = GetNode<Line2D>("/root/Node2D/char1/hitmarker");
     }
     private void _on_timeout(){
-        GD.Print("on timeout start");
         hitmarker.Visible = false;
     }
 }

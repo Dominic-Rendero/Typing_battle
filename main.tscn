@@ -47,6 +47,8 @@ scale = Vector2(0.380719, 0.38806)
 texture = ExtResource("3_s6cvf")
 
 [node name="BigTimer" type="Timer" parent="char1/fireball"]
+wait_time = 3.437
+one_shot = true
 script = ExtResource("5_qwtkw")
 
 [node name="hitmarker" type="Line2D" parent="char1"]
