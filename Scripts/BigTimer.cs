@@ -7,7 +7,6 @@ public partial class BigTimer : Timer{
         fireball = GetNode<Sprite2D>("/root/Node2D/char1/fireball");
     }
     private void _on_timeout(){
-            GD.Print("on timeout start for firball");
             fireball.Visible = false;
     }
 }

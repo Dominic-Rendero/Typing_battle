@@ -1,10 +1,20 @@
-The quick brown fox jumps over the lazy dog.
-A journey of a thousand miles begins with a single step.
-"To be or not to be, that is the question."
-All that glitters is not gold.
-The pen is mightier than the sword.
-Actions speak louder than words.
-A picture is worth a thousand words.
-"When in Rome, do as the Romans do."
-Fortune favors the bold.
-The early bird catches the worm.
+Sentence 1
+Sentence 2
+Sentence 3
+Sentence 4
+Sentence 5
+Sentence 6
+Sentence 7
+Sentence 8
+Sentence 9
+Sentence 10
+Sentence 11
+Sentence 12
+Sentence 13
+Sentence 14
+Sentence 15
+Sentence 16
+Sentence 17
+Sentence 18
+Sentence 19
+Sentence 20

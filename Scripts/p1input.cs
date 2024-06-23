@@ -1,7 +1,8 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-public partial class input : LineEdit{
+public partial class p1input : LineEdit{
+    //Lists to store target words/sentences
     private List<string> words = new List<string>();
     private List<string> sentences = new List<string>();
     private Label wordlabel;
@@ -10,6 +11,8 @@ public partial class input : LineEdit{
     private Timer hittimer;
     private Label sentencelabel;
     private Sprite2D bighit;
+    private Timer bigtimer;
+    private TextureProgressBar p2health;
     
     public override void _Ready(){
         GD.Print("start ready");
@@ -20,9 +23,13 @@ public partial class input : LineEdit{
         hittimer = GetNode<Timer>("/root/Node2D/char1/hitmarker/timer");
         
         bighit = GetNode<Sprite2D>("/root/Node2D/char1/fireball");
+        bigtimer = GetNode<Timer>("/root/Node2D/char1/fireball/BigTimer");
         
         words = utils.txt_to_list("res://rand_words.txt");
         sentences = utils.txt_to_list("res://rand_sentences.txt");
+        
+        p2health = GetNode<TextureProgressBar>("/root/Node2D/char2/p2healthbar");
+        
         GetRandomWord();
         GetRandomSentence();
     }
@@ -46,12 +53,19 @@ public partial class input : LineEdit{
             if(wordlabel.Text == inputbox.Text){
                 GetRandomWord();
                 hitmarker.Visible = true;
+                p2health.Value -= 1;
                 hittimer.Start();
             }
-            if(sentencelabel.Text == inputbox.Text){
+            else if((sentencelabel.Text == inputbox.Text) && (bighit.Visible == true)){
+                GetRandomSentence();
+                bighit.Visible = false;
+            }
+            else if(sentencelabel.Text == inputbox.Text){
                 GetRandomSentence();
                 bighit.Visible = true;
+                bigtimer.Start();
             }
+
             inputbox.Text = "";
         }
     }
