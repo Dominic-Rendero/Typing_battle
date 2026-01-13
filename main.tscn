@@ -1,19 +1,18 @@
 [gd_scene load_steps=8 format=3 uid="uid://df1bssrcteh62"]
 
 [ext_resource type="Texture2D" uid="uid://dayddbgy1sgk1" path="res://adil-yousifi-wizard.jpg" id="1_ula2p"]
-[ext_resource type="Script" path="res://Scripts/utils.cs" id="1_ws5pj"]
+[ext_resource type="Script" uid="uid://b7883gjorapq1" path="res://Scripts/utils.cs" id="1_ws5pj"]
 [ext_resource type="Texture2D" uid="uid://bnuv7ble0tpf0" path="res://fireball.jpg" id="3_s6cvf"]
-[ext_resource type="Script" path="res://Scripts/timer.cs" id="4_cdy7j"]
-[ext_resource type="Script" path="res://Scripts/p1input.cs" id="4_e8xwg"]
-[ext_resource type="Script" path="res://Scripts/BigTimer.cs" id="5_qwtkw"]
+[ext_resource type="Script" uid="uid://dlr27o2k101m8" path="res://Scripts/timer.cs" id="4_cdy7j"]
+[ext_resource type="Script" uid="uid://bsqpqoomrs55l" path="res://Scripts/p1input.cs" id="4_e8xwg"]
+[ext_resource type="Script" uid="uid://bnttfbr83iqrh" path="res://Scripts/BigTimer.cs" id="5_qwtkw"]
 [ext_resource type="Texture2D" uid="uid://bnedfhptdyx2w" path="res://healthbar.png" id="7_v8f3n"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(617, 70)
 script = ExtResource("1_ws5pj")
 
 [node name="char1" type="Node2D" parent="."]
-position = Vector2(-390, 85)
+position = Vector2(210, 109)
 
 [node name="visual" type="Sprite2D" parent="char1"]
 position = Vector2(-100, 304)
@@ -26,13 +25,16 @@ offset_top = 51.0
 offset_right = -51.0
 offset_bottom = 92.0
 text = "Words"
+metadata/_edit_use_anchors_ = true
 
 [node name="input" type="LineEdit" parent="char1"]
 offset_left = 7.0
 offset_top = 361.0
 offset_right = 205.0
 offset_bottom = 401.0
+keep_editing_on_text_submit = true
 script = ExtResource("4_e8xwg")
+metadata/_edit_use_anchors_ = true
 
 [node name="display_sentence" type="Label" parent="char1"]
 offset_left = -146.0
@@ -40,6 +42,7 @@ offset_top = -12.0
 offset_right = 193.0
 offset_bottom = 11.0
 text = "Sentences"
+metadata/_edit_use_anchors_ = true
 
 [node name="fireball" type="Sprite2D" parent="char1"]
 visible = false
@@ -64,10 +67,10 @@ one_shot = true
 script = ExtResource("4_cdy7j")
 
 [node name="char2" type="Node2D" parent="."]
-position = Vector2(494, 72)
+position = Vector2(1094, 96)
 
 [node name="visual" type="Sprite2D" parent="char2"]
-position = Vector2(-66, 315)
+position = Vector2(-45, 315.00003)
 scale = Vector2(0.195274, 0.229443)
 texture = ExtResource("1_ula2p")
 
@@ -77,13 +80,14 @@ offset_top = 91.0
 offset_right = -63.0
 offset_bottom = 132.0
 text = "Words"
+metadata/_edit_use_anchors_ = true
 
-[node name="input" type="LineEdit" parent="char2"]
+[node name="input2" type="LineEdit" parent="char2"]
 offset_left = -445.0
 offset_top = 390.0
 offset_right = -244.0
 offset_bottom = 421.0
-script = ExtResource("4_e8xwg")
+metadata/_edit_use_anchors_ = true
 
 [node name="display_sentence" type="Label" parent="char2"]
 offset_left = -186.0
@@ -91,6 +95,7 @@ offset_top = 1.0
 offset_right = 153.0
 offset_bottom = 24.0
 text = "Sentences"
+metadata/_edit_use_anchors_ = true
 
 [node name="fireball" type="Sprite2D" parent="char2"]
 visible = false
@@ -121,6 +126,7 @@ offset_right = 31.0
 offset_bottom = -46.0
 value = 100.0
 texture_progress = ExtResource("7_v8f3n")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="char1/fireball/BigTimer" to="char1/fireball/BigTimer" method="_on_timeout"]
 [connection signal="timeout" from="char1/hitmarker/timer" to="char1/hitmarker/timer" method="_on_timeout"]
