@@ -69,6 +69,15 @@ wait_time = 0.095
 one_shot = true
 script = ExtResource("4_cdy7j")
 
+[node name="PlayerHealthBar" type="TextureProgressBar" parent="char1"]
+offset_left = -199.0
+offset_top = -77.0
+offset_right = 235.0
+offset_bottom = -35.0
+value = 100.0
+texture_progress = ExtResource("7_v8f3n")
+metadata/_edit_use_anchors_ = true
+
 [node name="char2" type="Node2D" parent="."]
 position = Vector2(1094, 96)
 
@@ -84,10 +93,10 @@ points = PackedVector2Array(-420, 281, -81, 265, 302, 236)
 default_color = Color(1, 0, 0, 1)
 
 [node name="EnemyHealthBar" type="TextureProgressBar" parent="char2"]
-offset_left = -420.0
-offset_top = 45.0
-offset_right = 14.0
-offset_bottom = 87.0
+offset_left = -402.0
+offset_top = -65.0
+offset_right = 32.0
+offset_bottom = -23.0
 value = 100.0
 texture_progress = ExtResource("7_v8f3n")
 metadata/_edit_use_anchors_ = true

@@ -6,7 +6,6 @@ public partial class p1input : LineEdit{
 	private List<string> words = new List<string>();
 	private List<string> sentences = new List<string>();
 	private Label wordlabel;
-	private LineEdit inputbox;
 	private Line2D hitmarker;
 	private Timer hittimer;
 	private Label sentencelabel;
