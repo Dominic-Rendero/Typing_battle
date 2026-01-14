@@ -12,7 +12,7 @@ public partial class p1input : LineEdit{
 	private Label sentencelabel;
 	private Sprite2D bighit;
 	private Timer bigtimer;
-	private TextureProgressBar p2health;
+	private TextureProgressBar enemyHealth;
 	
 	public override void _Ready(){
 		GD.Print("start ready");
@@ -27,7 +27,7 @@ public partial class p1input : LineEdit{
 		words = utils.txt_to_list("res://rand_words.txt");
 		sentences = utils.txt_to_list("res://rand_sentences.txt");
 		
-		p2health = GetNode<TextureProgressBar>("/root/Node2D/char2/p2healthbar");
+		enemyHealth = GetNode<TextureProgressBar>("/root/Node2D/char2/EnemyHealthBar");
 		
 		GetRandomWord();
 		GetRandomSentence();
@@ -53,12 +53,11 @@ public partial class p1input : LineEdit{
 		if(wordlabel.Text == submitted){
 			GetRandomWord();
 			hitmarker.Visible = true;
-			p2health.Value -= 1;
+			enemyHealth.Value -= 1;
 			hittimer.Start();
 		}
 		else if((sentencelabel.Text == submitted) && (bighit.Visible == true)){
 			GetRandomSentence();
-			bighit.Visible = false;
 		}
 		else if(sentencelabel.Text == submitted){
 			GetRandomSentence();
