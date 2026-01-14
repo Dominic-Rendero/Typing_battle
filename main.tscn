@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://df1bssrcteh62"]
 
-[ext_resource type="Texture2D" uid="uid://dayddbgy1sgk1" path="res://Pictures/adil-yousifi-wizard.jpg" id="1_ula2p"]
+[ext_resource type="Texture2D" uid="uid://b6utsylr6qcx3" path="res://Pictures/adil-yousifi-wizard.jpg" id="1_ula2p"]
 [ext_resource type="Script" uid="uid://bwog4oa2vhj0b" path="res://Scripts/utils.cs" id="1_ws5pj"]
-[ext_resource type="Texture2D" uid="uid://bnuv7ble0tpf0" path="res://Pictures/fireball.jpg" id="3_s6cvf"]
+[ext_resource type="Texture2D" uid="uid://eife5nvkio3g" path="res://Pictures/fireball.jpg" id="3_s6cvf"]
 [ext_resource type="Script" uid="uid://bgb24ebpk6238" path="res://Scripts/timer.cs" id="4_cdy7j"]
 [ext_resource type="Script" uid="uid://c6pqwjpnhi0nx" path="res://Scripts/p1input.cs" id="4_e8xwg"]
 [ext_resource type="Script" uid="uid://de2pjocufxlr4" path="res://Scripts/BigTimer.cs" id="5_qwtkw"]
-[ext_resource type="Texture2D" uid="uid://bnedfhptdyx2w" path="res://Pictures/healthbar.png" id="7_v8f3n"]
+[ext_resource type="Texture2D" uid="uid://b7r228o8nwjr3" path="res://Pictures/healthbar.png" id="7_v8f3n"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_272bh"]
 load_path = "res://.godot/imported/monster.jpg-898dd30cf802ea395f63386dc11dcea4.ctex"
@@ -18,7 +18,7 @@ script = ExtResource("1_ws5pj")
 position = Vector2(210, 109)
 
 [node name="visual" type="Sprite2D" parent="char1"]
-position = Vector2(-104.00001, 371)
+position = Vector2(-105.00001, 371)
 scale = Vector2(0.204892, 0.243547)
 texture = ExtResource("1_ula2p")
 
@@ -73,7 +73,7 @@ script = ExtResource("4_cdy7j")
 position = Vector2(1094, 96)
 
 [node name="visual" type="Sprite2D" parent="char2"]
-position = Vector2(-135.99997, 344)
+position = Vector2(-135.99997, 345.99997)
 scale = Vector2(0.26087943, 0.25387436)
 texture = SubResource("CompressedTexture2D_272bh")
 
@@ -91,6 +91,3 @@ offset_bottom = 87.0
 value = 100.0
 texture_progress = ExtResource("7_v8f3n")
 metadata/_edit_use_anchors_ = true
-
-[connection signal="timeout" from="char1/fireball/BigTimer" to="char1/fireball/BigTimer" method="_on_timeout"]
-[connection signal="timeout" from="char1/hitmarker/timer" to="char1/hitmarker/timer" method="_on_timeout"]
