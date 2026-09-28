@@ -34,6 +34,7 @@ public partial class p1input : LineEdit{
 		CallDeferred("grab_focus");
 	}
 	private void GetRandomWord(){
+		GD.Print("GetRandomWord was run");
 		GD.Randomize();
 		Random rand = new Random();
 		int i = rand.Next(words.Count);
@@ -41,6 +42,7 @@ public partial class p1input : LineEdit{
 		wordlabel.Text = randword;
 	} 
 	private void GetRandomSentence(){
+		GD.Print("GetRandomSentence was run");
 		GD.Randomize();
 		Random rand = new Random();
 		int i = rand.Next(sentences.Count);

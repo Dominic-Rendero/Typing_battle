@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://df1bssrcteh62"]
+[gd_scene load_steps=10 format=3 uid="uid://df1bssrcteh62"]
 
 [ext_resource type="Texture2D" uid="uid://b6utsylr6qcx3" path="res://Pictures/adil-yousifi-wizard.jpg" id="1_ula2p"]
 [ext_resource type="Script" uid="uid://bwog4oa2vhj0b" path="res://Scripts/utils.cs" id="1_ws5pj"]
@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://c6pqwjpnhi0nx" path="res://Scripts/p1input.cs" id="4_e8xwg"]
 [ext_resource type="Script" uid="uid://de2pjocufxlr4" path="res://Scripts/BigTimer.cs" id="5_qwtkw"]
 [ext_resource type="Texture2D" uid="uid://b7r228o8nwjr3" path="res://Pictures/healthbar.png" id="7_v8f3n"]
+[ext_resource type="Texture2D" uid="uid://0f7x86x1dov8" path="res://Pictures/monster.jpg" id="8_5vw27"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_272bh"]
-load_path = "res://.godot/imported/monster.jpg-898dd30cf802ea395f63386dc11dcea4.ctex"
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ws5pj")
@@ -77,6 +77,11 @@ offset_bottom = -35.0
 value = 100.0
 texture_progress = ExtResource("7_v8f3n")
 metadata/_edit_use_anchors_ = true
+
+[node name="Monster" type="Sprite2D" parent="char1"]
+position = Vector2(706, 332)
+scale = Vector2(0.27666664, 0.22140618)
+texture = ExtResource("8_5vw27")
 
 [node name="char2" type="Node2D" parent="."]
 position = Vector2(1094, 96)
