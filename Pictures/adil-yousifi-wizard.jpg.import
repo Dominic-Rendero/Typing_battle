@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnedfhptdyx2w"
-path="res://.godot/imported/healthbar.png-08af7463fdf24a6160ff175bbec26e48.ctex"
+uid="uid://b6utsylr6qcx3"
+path="res://.godot/imported/adil-yousifi-wizard.jpg-78428b9dad9886991160b113c8e23939.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://healthbar.png"
-dest_files=["res://.godot/imported/healthbar.png-08af7463fdf24a6160ff175bbec26e48.ctex"]
+source_file="res://Pictures/adil-yousifi-wizard.jpg"
+dest_files=["res://.godot/imported/adil-yousifi-wizard.jpg-78428b9dad9886991160b113c8e23939.ctex"]
 
 [params]
 

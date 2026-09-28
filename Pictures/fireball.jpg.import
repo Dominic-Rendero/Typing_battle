@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dayddbgy1sgk1"
-path="res://.godot/imported/adil-yousifi-wizard.jpg-cc298e09d3a5ef095fdee180c97a2419.ctex"
+uid="uid://eife5nvkio3g"
+path="res://.godot/imported/fireball.jpg-588919c819bec3f6847338c9969f88bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://adil-yousifi-wizard.jpg"
-dest_files=["res://.godot/imported/adil-yousifi-wizard.jpg-cc298e09d3a5ef095fdee180c97a2419.ctex"]
+source_file="res://Pictures/fireball.jpg"
+dest_files=["res://.godot/imported/fireball.jpg-588919c819bec3f6847338c9969f88bf.ctex"]
 
 [params]
 
